@@ -1,0 +1,20 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - "/usr/local/tomcat/logs/localhost_access_log*.log"
+  scan_frequency: 10s
+
+- type: log
+  enabled: true
+  paths:
+    - "/usr/local/tomcat/logs/catalina*.log"
+  scan_frequency: 10s
+  fields:
+    catalina: true
+  fields_under_root: true
+
+output.logstash:
+    hosts: ["server:port"]
+
+tags: ["tomcat-filebeat-example"]
