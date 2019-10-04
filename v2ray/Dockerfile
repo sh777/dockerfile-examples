@@ -1,12 +1,13 @@
 FROM alpine:3.10
 
+LABEL Author="Michael Huang(michael.huang@xeniro.io)"
+LABEL org.label-schema.docker.cmd="docker run -p 10088:10088 -d sh777/v2ray:latest"
+
 WORKDIR /root
 
 ENV V2RAY_VERSION v4.20.0
 ENV V2RAY_DOWNLOAD_URL=https://github.com/v2ray/v2ray-core/releases/download/${V2RAY_VERSION}/v2ray-linux-64.zip
 ENV V2RAY_PORT 10088
-
-
 
 RUN apk add --no-cache curl unzip
 
@@ -19,7 +20,6 @@ RUN curl -OL ${V2RAY_DOWNLOAD_URL} && \
 #config v2ray
 ADD config.json /etc/v2ray/config.json
 RUN chmod 644 /etc/v2ray/config.json 
-
 
 EXPOSE ${V2RAY_PORT}
 
