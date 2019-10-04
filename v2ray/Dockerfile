@@ -1,6 +1,6 @@
 FROM alpine:3.10
 
-LABEL Author="Michael Huang(michael.huang@xeniro.io)"
+LABEL Author="Michael Huang(withoutbug@gmail.com)"
 LABEL org.label-schema.docker.cmd="docker run -p 10088:10088 -d sh777/v2ray:latest"
 
 WORKDIR /root
@@ -15,6 +15,7 @@ RUN apk add --no-cache curl unzip
 RUN curl -OL ${V2RAY_DOWNLOAD_URL} && \
     mkdir /etc/v2ray && \
     unzip /root/v2ray-linux-64.zip -d /etc/v2ray && \
+    rm /root/v2ray-linux-64.zip && \
     chmod 777 /etc/v2ray/v2ray
 
 #config v2ray
