@@ -13,12 +13,14 @@ RUN apk add --no-cache curl unzip
 #Install v2ray
 RUN curl -OL ${V2RAY_DOWNLOAD_URL} && \
     mkdir /etc/v2ray && \
-    unzip /root/v2ray-linux-64.zip -d /etc/v2ray
+    unzip /root/v2ray-linux-64.zip -d /etc/v2ray && \
+    chmod 777 /etc/v2ray/v2ray
 
 #config v2ray
 ADD config.json /etc/v2ray/config.json
-RUN chmod 644 /etc/v2ray/config.json
+RUN chmod 644 /etc/v2ray/config.json 
+
 
 EXPOSE ${V2RAY_PORT}
 
-ENTRYPOINT [ "/etc/v2ray", "--config", "config.json" ]
+ENTRYPOINT [ "/etc/v2ray/v2ray", "--config", "/etc/v2ray/config.json" ]
