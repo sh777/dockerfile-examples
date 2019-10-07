@@ -12,7 +12,7 @@ ENV V2RAY_DOWNLOAD_URL=https://github.com/v2ray/v2ray-core/releases/download/${V
 ENV V2RAY_PORT 10088
 
 
-RUN apk add --no-cache curl unzip
+RUN apk add --no-cache curl unzip tzdata
 
 #Install v2ray
 RUN curl -OL ${V2RAY_DOWNLOAD_URL} && \
