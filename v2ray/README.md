@@ -9,7 +9,7 @@ docker build -t sh777/v2ray .
 ## run
 
 ```bash
-docker run -p 10088:10088 -d sh777/v2ray
+docker run -p 10888:10888 -d sh777/v2ray
 ```
 
 ## test

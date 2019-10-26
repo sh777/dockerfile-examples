@@ -10,7 +10,7 @@
       // "error": "/path/to/error/log/file",
   
       // Log level, one of "debug", "info", "warning", "error", "none"
-      "loglevel": "warning"
+      "loglevel": "debug"
     },
     // List of inbound proxy configurations.
     "inbounds": [{
@@ -97,7 +97,7 @@
         "domain:shadowsocks.org": "electronicsrealm.com"
       },
       "servers": [
-        "1.1.1.1",
+        "114.114.114.114",
         {
           "address": "114.114.114.114",
           "port": 53,
@@ -107,7 +107,7 @@
           ]
         },
         "8.8.8.8",
-        "localhost"
+        "1.1.1.1"
       ]
     },
   
