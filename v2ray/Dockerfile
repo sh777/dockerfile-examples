@@ -7,7 +7,7 @@ WORKDIR /root
 
 ARG TZ="Asia/Shanghai"
 
-ENV V2RAY_VERSION v4.21.0
+ENV V2RAY_VERSION v4.23.1
 ENV V2RAY_DOWNLOAD_URL=https://github.com/v2ray/v2ray-core/releases/download/${V2RAY_VERSION}/v2ray-linux-64.zip
 ENV V2RAY_PORT 10088
 
