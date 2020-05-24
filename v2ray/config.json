@@ -36,6 +36,14 @@
           }
         ]
       },
+        
+      "streamSettings":{
+        "wsSettings":{
+          "path":"/",
+          "headers":{}
+        },
+        "network":"ws"
+      }
   
       // Enable sniffing on TCP connection.
       "sniffing": {
