@@ -1,4 +1,4 @@
-name: Build and Push dind-curl Docker Image
+name: Build v2ray
 
 on:
   workflow_dispatch:
