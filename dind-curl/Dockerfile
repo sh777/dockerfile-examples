@@ -1,3 +1,3 @@
 FROM docker:dind
 
-RUN apk --no-cache add curl
+RUN apk --no-cache add curl zip jq
