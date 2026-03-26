@@ -17,13 +17,13 @@ jobs:
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE on runner, so your workflow can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5  # v2
 
        # To build and push Docker image with Buildx with full support of the features provided by Moby BuildKit builder toolkit
       - name: Build and push
         #id: A unique identifier for the step. You can use the id to reference the step in contexts
         id: docker_build
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@ac9327eae2b366085ac7f6a2d02df8aa8ead720a  # v2
         with:
           # push: Push the build result to registry, default: false
           context: ./visual-chatgpt
